@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signification des Rêves en Islam - Guide 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background: #0D0C1D; /* Deep Indigo */
+            --primary: #161A30; /* Darker Indigo */
+            --accent: #F4CE14; /* Vibrant Gold */
+            --text-primary: #F0F0F0;
+            --text-secondary: #B6BBC4;
+        }
+
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background);
+            color: var(--text-primary);
+            overflow-x: hidden;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 15% 25%, rgba(124, 58, 237, 0.2), transparent 40%),
+                        radial-gradient(circle at 85% 75%, rgba(217, 70, 239, 0.2), transparent 40%);
+            animation: aurora 20s infinite linear;
+            z-index: -1;
+        }
+
+        @keyframes aurora {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        h1, h2, h3 { font-family: 'Amiri', serif; }
+
+        #cursor-light {
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            transition: transform 0.1s ease-out;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--background); }
+        ::-webkit-scrollbar-thumb { background-color: var(--accent); border-radius: 10px; }
+
+        .glass-card {
+            background: rgba(22, 26, 48, 0.5); /* --primary with alpha */
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: background 0.3s, border 0.3s, transform 0.3s;
+        }
+        .glass-card:hover {
+            background: rgba(22, 26, 48, 0.7);
+            border: 1px solid rgba(244, 206, 20, 0.3);
+        }
+
+        .symbol-card:hover {
+            transform: translateY(-10px) scale(1.02);
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .filter-btn.active {
+            background-color: var(--accent);
+            color: var(--background);
+            font-weight: 700;
+        }
+        
+        #interpretation-response {
+            white-space: pre-wrap;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class="text-slate-200">
+
+    <div id="cursor-light"></div>
+
+    <!-- En-tête -->
+    <header class="glass-card sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-amber-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+                <h1 class="text-xl md:text-2xl font-bold tracking-wider">Rêves en Islam</h1>
+            </a>
+        </div>
+    </header>
+
+    <!-- Contenu Principal -->
+    <main class="container mx-auto p-4 md:p-8 relative z-10">
+        
+        <!-- Hero Section -->
+        <section class="text-center my-16 md:my-24 animate-on-scroll">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-300 to-amber-400 mb-6">Explorez le Monde des Rêves</h1>
+            <p class="max-w-3xl mx-auto text-lg md:text-xl text-slate-300">
+                Un guide complet et un interprète personnel pour comprendre la signification des visions nocturnes selon la tradition islamique.
+            </p>
+        </section>
+
+        <!-- Section Bento Grid -->
+        <section class="mb-24">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center animate-on-scroll">La Vision Islamique du Rêve</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="md:col-span-2 p-8 rounded-2xl glass-card animate-on-scroll">
+                     <h3 class="font-bold text-2xl text-green-400">Ar-Ru'ya (الرؤيا) - Le Rêve Véridique</h3>
+                     <p class="mt-2 text-lg text-slate-300">Une vision envoyée par Allah, porteuse de bonne nouvelle ou d'avertissement. Le Prophète (ﷺ) l'a décrite comme une des 46 parties de la prophétie.</p>
+                </div>
+                 <div class="p-8 rounded-2xl glass-card animate-on-scroll" style="transition-delay: 100ms;">
+                     <h3 class="font-bold text-2xl text-red-400">Al-Hulm (الحلم)</h3>
+                     <p class="mt-2 text-slate-300">Un mauvais rêve provenant de Shaytan (Satan) pour troubler le croyant. Il est conseillé de chercher refuge auprès d'Allah.</p>
+                </div>
+                 <div class="md:col-span-3 p-8 rounded-2xl glass-card animate-on-scroll" style="transition-delay: 200ms;">
+                     <h3 class="font-bold text-2xl text-blue-400">Rêve de l'âme (حديث النفس)</h3>
+                     <p class="mt-2 text-slate-300">Le reflet de nos pensées et préoccupations quotidiennes, traité par notre subconscient et généralement sans signification spirituelle.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interprète Personnel IA -->
+        <section class="mb-24 animate-on-scroll">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center">Votre Interprète Personnel</h2>
+            <div class="glass-card p-8 rounded-2xl">
+                <form id="dream-form">
+                    <label for="dream-input" class="block mb-4 text-lg text-slate-300">Décrivez votre rêve avec le plus de détails possible :</label>
+                    <textarea id="dream-input" rows="6" class="w-full p-4 text-lg border border-slate-700 bg-transparent rounded-lg focus:ring-2 focus:ring-amber-300 focus:border-amber-300 transition-all duration-300" placeholder="Exemple : J'ai rêvé que je volais au-dessus d'une mer d'eau claire, puis j'ai vu une clé en or..."></textarea>
+                    <button type="submit" class="mt-6 w-full py-4 px-8 text-lg font-bold rounded-lg bg-amber-400 text-black hover:bg-amber-300 transition-colors duration-300 flex items-center justify-center space-x-2">
+                        <span>Interpréter mon rêve</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                    </button>
+                </form>
+                <div id="interpretation-container" class="mt-8 hidden">
+                     <h3 class="text-2xl font-bold text-amber-300 mb-4">Analyse de votre rêve :</h3>
+                     <div id="interpretation-response" class="p-6 border border-slate-700 rounded-lg bg-slate-900/50 text-slate-300"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Barre de recherche et filtres -->
+        <section class="sticky top-[70px] z-40 glass-card py-6 mb-12 animate-on-scroll" style="transition-delay: 300ms;">
+            <div class="px-6">
+                <h2 class="text-4xl md:text-5xl font-bold mb-8 text-center">Dictionnaire des Symboles</h2>
+                <div class="relative mb-4">
+                    <input type="text" id="searchInput" placeholder="Rechercher un symbole (ex: Eau, Serpent...)" class="w-full p-4 pl-12 text-lg border border-slate-700 bg-transparent rounded-full focus:ring-2 focus:ring-amber-300 focus:border-amber-300 transition-all duration-300">
+                    <svg class="w-6 h-6 text-slate-400 absolute top-1/2 left-4 transform -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                </div>
+                <div id="filters" class="flex flex-wrap items-center justify-center gap-2">
+                    <!-- Filtres injectés par JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Dictionnaire des symboles -->
+        <section id="symbols-dictionary">
+            <div id="symbols-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Les cartes de symboles seront injectées ici par JavaScript -->
+            </div>
+            <p id="no-results" class="text-center text-slate-400 text-xl mt-8 hidden">Aucun symbole correspondant à votre recherche n'a été trouvé.</p>
+        </section>
+
+    </main>
+    
+    <!-- Pied de page -->
+    <footer class="mt-24 py-12 border-t border-slate-800">
+        <div class="container mx-auto px-6 text-center text-slate-400">
+            <p class="font-semibold text-lg text-slate-200">&copy; 2025 - Guide des Rêves en Islam</p>
+            <p class="text-sm mt-4 max-w-2xl mx-auto">Avertissement : Ce guide est à but éducatif. L'interprétation des rêves est une science complexe qui nécessite une connaissance approfondie. Pour une analyse personnelle, la consultation d'un savant qualifié est recommandée.</p>
+        </div>
+    </footer>
+
+    <script>
+        const dreamSymbols = [
+            // Nature & Éléments
+            { term: 'Eau', category: 'Nature', meaning: 'L\'eau claire symbolise la connaissance, la vie et la pureté. L\'eau trouble peut représenter des difficultés, des tentations ou une maladie.' },
+            { term: 'Feu', category: 'Nature', meaning: 'Un feu bénéfique peut symboliser la guidance et la puissance. Un feu destructeur représente la guerre, les châtiments, les péchés ou les pertes.' },
+            { term: 'Lune', category: 'Nature', meaning: 'La lune peut représenter un savant, un guide ou un roi juste. Son état (pleine, croissant) influence l\'interprétation.' },
+            { term: 'Soleil', category: 'Nature', meaning: 'Le soleil symbolise une figure d\'autorité supérieure comme un roi, un père ou un dirigeant. Un soleil éclatant est un bon présage.' },
+            { term: 'Terre', category: 'Nature', meaning: 'La terre peut symboliser la vie, la subsistance, ou une femme. Une terre fertile est un signe de prospérité.' },
+            { term: 'Ciel', category: 'Nature', meaning: 'Un ciel clair représente la miséricorde d\'Allah et de bonnes nouvelles. Un ciel sombre peut indiquer la colère divine ou des difficultés.' },
+            { term: 'Pluie', category: 'Nature', meaning: 'La pluie est un symbole de miséricorde, de subsistance et de vie. Une pluie torrentielle peut être un avertissement.' },
+            { term: 'Montagne', category: 'Nature', meaning: 'Représente une figure de grande autorité, un objectif élevé ou un refuge. Grimper une montagne indique la réussite après l\'effort.' },
+            { term: 'Arbre', category: 'Nature', meaning: 'Un arbre verdoyant symbolise un homme pieux et généreux. Un arbre sec peut représenter un hypocrite ou une perte.' },
+            
+            // Animaux
+            { term: 'Serpent', category: 'Animaux', meaning: 'Représente souvent un ennemi, la jalousie ou un danger caché. Sa couleur et son comportement affinent l\'interprétation.' },
+            { term: 'Poisson', category: 'Animaux', meaning: 'Symbolise une subsistance (rizq) bénie et licite, surtout s\'il est frais et grand.' },
+            { term: 'Oiseau', category: 'Animaux', meaning: 'Peut représenter les aspirations, les nouvelles, ou l\'âme. Un oiseau inconnu est souvent un ange.' },
+            { term: 'Lion', category: 'Animaux', meaning: 'Symbolise un dirigeant puissant et redoutable, ou un ennemi tyrannique. Le vaincre est un signe de victoire.' },
+            { term: 'Chien', category: 'Animaux', meaning: 'Peut représenter un ennemi faible mais insolent, ou un serviteur déloyal.' },
+            { term: 'Cheval', category: 'Animaux', meaning: 'Symbolise la noblesse, le pouvoir et les voyages. Monter un beau cheval indique une élévation de statut.' },
+            { term: 'Scorpion', category: 'Animaux', meaning: 'Un ennemi médisant et faible qui cause du tort par ses paroles.' },
+
+            // Actions & Événements
+            { term: 'Voler', category: 'Actions', meaning: 'Voler dans le ciel peut signifier un voyage, une élévation de statut, ou un honneur. Si le vol est difficile, cela indique des incertitudes.' },
+            { term: 'Mort', category: 'Événements', meaning: 'Rêver de sa propre mort peut symboliser un renouveau spirituel ou un grand changement. Ce n\'est pas toujours un mauvais présage.' },
+            { term: 'Mariage', category: 'Événements', meaning: 'Indique un partenariat, une nouvelle responsabilité ou un gain de statut. Peut aussi symboliser un accord avec Allah.' },
+            { term: 'Pèlerinage (Hajj)', category: 'Actions', meaning: 'Accomplir le Hajj en rêve est un signe de piété, de pardon des péchés et d\'accomplissement d\'un objectif majeur.' },
+            { term: 'Prière (Salat)', category: 'Actions', meaning: 'Faire la prière indique la guidance, l\'accomplissement des devoirs et la proximité avec Allah.' },
+            { term: 'Manger', category: 'Actions', meaning: 'Manger de la bonne nourriture licite est un signe de subsistance bénie. La nature de la nourriture est clé.' },
+            { term: 'Pleurer', category: 'Actions', meaning: 'Pleurer sans cri peut indiquer un soulagement et une joie à venir. Des pleurs bruyants peuvent signifier le contraire.' },
+            { term: 'Tomber', category: 'Actions', meaning: 'Tomber d\'un lieu élevé peut indiquer un changement négatif de situation, une perte de statut ou un échec.' },
+            
+            // Corps Humain
+            { term: 'Dents', category: 'Corps', meaning: 'Représentent souvent la famille. La perte d\'une dent peut symboliser la perte d\'un proche, le paiement d\'une dette ou un soulagement.' },
+            { term: 'Cheveux', category: 'Corps', meaning: 'De beaux et longs cheveux peuvent symboliser la richesse, la longévité et le prestige. Perdre ses cheveux peut indiquer des pertes ou des soucis.' },
+            { term: 'Sang', category: 'Corps', meaning: 'Le sang peut symboliser l\'argent illicite (haram), un péché ou une perte de vitalité.' },
+            { term: 'Main', category: 'Corps', meaning: 'La main droite symbolise la force, le gain et le serment. La main gauche, son opposé.' },
+
+            // Objets
+            { term: 'Maison', category: 'Objets', meaning: 'La maison représente la situation personnelle du rêveur. Une maison neuve et grande est un bon signe, une maison en ruine peut indiquer des problèmes.' },
+            { term: 'Argent', category: 'Objets', meaning: 'Trouver de l\'argent peut indiquer des soucis passagers. Les pièces de monnaie sont souvent liées aux paroles.' },
+            { term: 'Or', category: 'Objets', meaning: 'Pour les hommes, l\'or est souvent un signe de chagrin ou de perte. Pour les femmes, il peut représenter la joie et le mariage.' },
+            { term: 'Voiture', category: 'Objets', meaning: 'Symbole moderne, la voiture représente le parcours de la vie. Son état et la conduite donnent des indices sur sa situation.' },
+            { term: 'Clé', category: 'Objets', meaning: 'Une clé symbolise l\'ouverture, la connaissance, la subsistance ou la victoire sur un ennemi.' },
+            { term: 'Livre', category: 'Objets', meaning: 'Un livre représente la connaissance, la force et les nouvelles. Le Coran est le meilleur des livres à voir.' },
+            { term: 'Vêtements', category: 'Objets', meaning: 'Les vêtements neufs et propres symbolisent la piété, la protection et un bon statut. Des vêtements sales indiquent le contraire.' },
+
+            // Nourriture
+            { term: 'Lait', category: 'Nourriture', meaning: 'Symbolise la fitra (la nature primordiale pure), la connaissance utile et l\'argent licite (halal).' },
+            { term: 'Miel', category: 'Nourriture', meaning: 'Représente la guérison, la douceur de la foi, le Coran et la connaissance bénéfique.' },
+            { term: 'Viande', category: 'Nourriture', meaning: 'La viande cuite est généralement un bon signe de subsistance. La viande crue peut symboliser la médisance (ghiba).' },
+            { term: 'Pain', category: 'Nourriture', meaning: 'Le pain symbolise la vie, la connaissance et l\'Islam. Un pain de bonne qualité est un signe de prospérité.' },
+            { term: 'Fruits', category: 'Nourriture', meaning: 'Les fruits de saison indiquent une subsistance rapide. Hors saison, ils peuvent indiquer des difficultés.' },
+
+            // Personnes
+            { term: 'Prophète Muhammad (ﷺ)', category: 'Personnes', meaning: 'Voir le Prophète (ﷺ) est une vision véridique. Cela annonce le bien, la guidance et le succès dans cette vie et l\'au-delà.' },
+            { term: 'Savant (Alim)', category: 'Personnes', meaning: 'Voir un savant religieux représente la guidance, la sagesse et la bénédiction.' },
+            { term: 'Enfant', category: 'Personnes', meaning: 'Un enfant peut symboliser un souci mineur, mais aussi une nouvelle joie ou un nouveau départ.' },
+        ];
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const symbolsGrid = document.getElementById('symbols-grid');
+            const searchInput = document.getElementById('searchInput');
+            const noResults = document.getElementById('no-results');
+            const filtersContainer = document.getElementById('filters');
+            const cursorLight = document.getElementById('cursor-light');
+            const dreamForm = document.getElementById('dream-form');
+            const dreamInput = document.getElementById('dream-input');
+            const interpretationContainer = document.getElementById('interpretation-container');
+            const interpretationResponse = document.getElementById('interpretation-response');
+
+            let activeFilter = 'Tous';
+
+            const renderContent = () => {
+                const searchTerm = searchInput.value.toLowerCase();
+                let filteredSymbols = dreamSymbols;
+
+                if (activeFilter !== 'Tous') {
+                    filteredSymbols = filteredSymbols.filter(symbol => symbol.category === activeFilter);
+                }
+                if (searchTerm) {
+                    filteredSymbols = filteredSymbols.filter(symbol => 
+                        symbol.term.toLowerCase().includes(searchTerm) || 
+                        symbol.meaning.toLowerCase().includes(searchTerm)
+                    );
+                }
+
+                displaySymbols(filteredSymbols);
+            };
+
+            const displaySymbols = (symbols) => {
+                symbolsGrid.innerHTML = '';
+                noResults.classList.toggle('hidden', symbols.length > 0);
+                
+                symbols.sort((a, b) => a.term.localeCompare(b.term));
+                
+                symbols.forEach((symbol, index) => {
+                    const card = document.createElement('div');
+                    card.className = 'p-6 rounded-2xl symbol-card glass-card animate-on-scroll';
+                    card.innerHTML = `
+                        <h3 class="text-2xl font-bold text-amber-300">${symbol.term}</h3>
+                        <p class="text-sm text-slate-400 mb-3">${symbol.category}</p>
+                        <p class="text-slate-300 mt-2 leading-relaxed">${symbol.meaning}</p>
+                    `;
+                    symbolsGrid.appendChild(card);
+                });
+                observeElements();
+            };
+
+            const createFilters = () => {
+                const categories = ['Tous', ...new Set(dreamSymbols.map(s => s.category))];
+                filtersContainer.innerHTML = categories.map(cat => `
+                    <button data-filter="${cat}" class="filter-btn px-4 py-2 text-sm font-semibold rounded-full transition-colors duration-200 hover:bg-amber-300 hover:text-black ${cat === activeFilter ? 'active' : ''}">
+                        ${cat}
+                    </button>
+                `).join('');
+
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        activeFilter = btn.dataset.filter;
+                        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        renderContent();
+                    });
+                });
+            };
+
+            document.addEventListener('mousemove', (e) => {
+                cursorLight.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
+            });
+            
+            const observeElements = () => {
+                const animatedElements = document.querySelectorAll('.animate-on-scroll');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                animatedElements.forEach(el => observer.observe(el));
+            };
+
+            // Fonction pour l'interprétation par IA
+            const getInterpretation = async (dreamDescription) => {
+                interpretationContainer.classList.remove('hidden');
+                interpretationResponse.innerHTML = 'Analyse en cours... <div class="w-5 h-5 border-t-2 border-amber-300 rounded-full animate-spin inline-block"></div>';
+                
+                const apiKey = ""; 
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+                
+                const systemPrompt = "Agis comme un interprète de rêves sage et expérimenté, spécialisé dans la tradition islamique, dans le style d'Ibn Sirin. Fournis des interprétations nuancées et spirituellement fondées. Ne donne pas de conseils médicaux ou financiers. Commence par 'Selon la tradition, votre rêve pourrait symboliser...' et termine toujours par un avertissement : 'Cependant, l'interprétation des rêves est une science complexe et personnelle. Allah est le plus Savant.' L'interprétation doit être concise et ne pas dépasser 150 mots.";
+
+                const payload = {
+                    contents: [{ parts: [{ text: dreamDescription }] }],
+                    systemInstruction: {
+                        parts: [{ text: systemPrompt }]
+                    },
+                };
+
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`Erreur API: ${response.statusText}`);
+                    }
+
+                    const result = await response.json();
+                    const text = result.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                    if (text) {
+                        interpretationResponse.innerText = text;
+                    } else {
+                        interpretationResponse.innerText = "Désolé, une erreur est survenue lors de l'analyse. Veuillez réessayer.";
+                    }
+                } catch (error) {
+                    console.error("Erreur lors de l'appel à l'API Gemini:", error);
+                    interpretationResponse.innerText = "Impossible de contacter le service d'interprétation. Veuillez vérifier votre connexion ou réessayer plus tard.";
+                }
+            };
+
+            dreamForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const dreamText = dreamInput.value.trim();
+                if (dreamText) {
+                    getInterpretation(dreamText);
+                }
+            });
+
+            // Initialisation
+            searchInput.addEventListener('input', renderContent);
+            createFilters();
+            renderContent();
+            observeElements();
+        });
+    </script>
+</body>
+</html>
+
