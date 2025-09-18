@@ -6,7 +6,7 @@
     <title>Signification des Rêves en Islam - Guide 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -156,6 +156,15 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                     </button>
                 </form>
+
+                <!-- Section pour la clé API, cachée par défaut -->
+                <div id="api-key-section" class="mt-6 hidden">
+                    <label for="api-key-input" class="block mb-2 text-sm text-amber-300">Votre Clé API Google AI est requise :</label>
+                    <input type="password" id="api-key-input" class="w-full p-2 border border-slate-700 bg-transparent rounded-lg focus:ring-2 focus:ring-amber-300" placeholder="Collez votre clé ici">
+                    <button id="save-api-key" class="mt-2 px-4 py-2 text-sm rounded-lg bg-slate-600 hover:bg-slate-500 transition-colors">Enregistrer la clé</button>
+                    <p class="text-xs text-slate-400 mt-2">Votre clé est stockée localement dans votre navigateur. Obtenez une clé sur <a href="https://aistudio.google.com/app/apikey" target="_blank" class="underline">Google AI Studio</a>.</p>
+                </div>
+
                 <div id="interpretation-container" class="mt-8 hidden">
                      <h3 class="text-2xl font-bold text-amber-300 mb-4">Analyse de votre rêve :</h3>
                      <div id="interpretation-response" class="p-6 border border-slate-700 rounded-lg bg-slate-900/50 text-slate-300"></div>
@@ -266,6 +275,9 @@
             const dreamInput = document.getElementById('dream-input');
             const interpretationContainer = document.getElementById('interpretation-container');
             const interpretationResponse = document.getElementById('interpretation-response');
+            const apiKeySection = document.getElementById('api-key-section');
+            const apiKeyInput = document.getElementById('api-key-input');
+            const saveApiKeyBtn = document.getElementById('save-api-key');
 
             let activeFilter = 'Tous';
 
@@ -342,11 +354,10 @@
             };
 
             // Fonction pour l'interprétation par IA
-            const getInterpretation = async (dreamDescription) => {
+            const getInterpretation = async (dreamDescription, apiKey) => {
                 interpretationContainer.classList.remove('hidden');
                 interpretationResponse.innerHTML = 'Analyse en cours... <div class="w-5 h-5 border-t-2 border-amber-300 rounded-full animate-spin inline-block"></div>';
                 
-                const apiKey = ""; 
                 const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
                 
                 const systemPrompt = "Agis comme un interprète de rêves sage et expérimenté, spécialisé dans la tradition islamique, dans le style d'Ibn Sirin. Fournis des interprétations nuancées et spirituellement fondées. Ne donne pas de conseils médicaux ou financiers. Commence par 'Selon la tradition, votre rêve pourrait symboliser...' et termine toujours par un avertissement : 'Cependant, l'interprétation des rêves est une science complexe et personnelle. Allah est le plus Savant.' L'interprétation doit être concise et ne pas dépasser 150 mots.";
@@ -366,7 +377,8 @@
                     });
 
                     if (!response.ok) {
-                        throw new Error(`Erreur API: ${response.statusText}`);
+                        const error = await response.json();
+                        throw new Error(`Erreur API: ${error.error.message}`);
                     }
 
                     const result = await response.json();
@@ -375,19 +387,37 @@
                     if (text) {
                         interpretationResponse.innerText = text;
                     } else {
-                        interpretationResponse.innerText = "Désolé, une erreur est survenue lors de l'analyse. Veuillez réessayer.";
+                        interpretationResponse.innerText = "Désolé, une erreur est survenue lors de l'analyse. La réponse reçue est vide.";
                     }
                 } catch (error) {
                     console.error("Erreur lors de l'appel à l'API Gemini:", error);
-                    interpretationResponse.innerText = "Impossible de contacter le service d'interprétation. Veuillez vérifier votre connexion ou réessayer plus tard.";
+                    interpretationResponse.innerText = `Impossible de contacter le service d'interprétation. L'erreur est : ${error.message}. Vérifiez que votre clé API est valide.`;
                 }
             };
 
             dreamForm.addEventListener('submit', (e) => {
                 e.preventDefault();
                 const dreamText = dreamInput.value.trim();
-                if (dreamText) {
-                    getInterpretation(dreamText);
+                if (!dreamText) return;
+
+                const userApiKey = localStorage.getItem('gemini-api-key');
+
+                if (!userApiKey) {
+                    interpretationContainer.classList.remove('hidden');
+                    apiKeySection.classList.remove('hidden');
+                    interpretationResponse.innerText = "Pour utiliser cette fonction, une clé API Google AI est nécessaire. Veuillez la coller ci-dessous.";
+                    return;
+                }
+                
+                getInterpretation(dreamText, userApiKey);
+            });
+
+            saveApiKeyBtn.addEventListener('click', () => {
+                const key = apiKeyInput.value.trim();
+                if(key) {
+                    localStorage.setItem('gemini-api-key', key);
+                    apiKeySection.classList.add('hidden');
+                    interpretationResponse.innerText = "Clé enregistrée ! Vous pouvez maintenant soumettre votre rêve pour interprétation.";
                 }
             });
 
